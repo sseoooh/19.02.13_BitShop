@@ -1,0 +1,18 @@
+package dao;
+
+import java.util.List;
+
+import domain.CustomerDTO;
+import proxy.Pagination;
+import proxy.Proxy;
+
+public interface CustomerDAO {
+	public void insertCustomer(CustomerDTO cus);
+	public List<CustomerDTO> selectCustomerList(Proxy pxy);
+	public List<CustomerDTO> selectCustomers(Proxy pxy);
+	public CustomerDTO selectCustomer(CustomerDTO cus);
+	public int countCustomer(Proxy pxy);
+	public boolean existsCustomerID(CustomerDTO cust);
+	public void updateCustomer(CustomerDTO cus);
+	public void deleteCustomer(CustomerDTO cus);
+}
